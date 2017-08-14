@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Conway's Game of Life - build with Vue.js</title>
+  <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    div.col {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conway's Game of Life - build with Vue.js</h1>
+  <div id="app">
+    <div class="row" v-for="row in ROWS">
+      <div class="col" v-for="col in COLS">
+        <cell></cell>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="src/cell.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
