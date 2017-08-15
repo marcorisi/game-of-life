@@ -2,6 +2,29 @@ var app = new Vue({
   el: '#app',
 
   data: {
+    _interval: null
+  },
+
+  methods: {
+    // start a new game of life
+    play: function (event) {
+
+      // already playing
+      if (this._interval) {
+        return false;
+      }
+
+      // otherwise, start a new game of life!
+      this._interval = setInterval(function () {
+        store.commit('next');
+      }, 1000);
+    },
+
+    // stop game of life
+    stop: function (event) {
+      clearInterval(this._interval);
+      this._interval = null;          // reset _interval
+    }
   },
 
   // Since Vuex stores are reactive, the simplest way to "retrieve" state

@@ -12,6 +12,9 @@
     div.col {
       display: inline-block;
     }
+    div.app-controller {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -22,6 +25,10 @@
         <!-- substract 1 to use for loop index as matrix index -->
         <cell v-bind:active="matrix[row-1][col-1]"></cell>
       </div>
+    </div>
+    <div class="app-controller">
+      <button v-on:click="play">Play</button>
+      <button v-on:click="stop">Stop</button>
     </div>
   </div>
 
