@@ -14,8 +14,8 @@ Vue.component('cell', {
   computed: {
     styleObject: function () {
       return {
-        width: '20px',
-        height: '20px',
+        width: '10px',
+        height: '10px',
         background: this.active ? '#000000' : '#FFFFFF'
       }
     }

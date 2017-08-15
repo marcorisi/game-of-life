@@ -17,7 +17,7 @@ var app = new Vue({
       // otherwise, start a new game of life!
       this._interval = setInterval(function () {
         store.commit('next');
-      }, 1000);
+      }, 200);
     },
 
     // stop game of life
@@ -46,8 +46,8 @@ var app = new Vue({
     console.log('conway\'s way of life app created...');
 
     var options = {
-      rows: 25,
-      cols: 25,
+      rows: 50,
+      cols: 50,
     };
     store.commit('init', options); // initializing store
   }
