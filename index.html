@@ -19,7 +19,8 @@
   <div id="app">
     <div class="row" v-for="row in ROWS">
       <div class="col" v-for="col in COLS">
-        <cell></cell>
+        <!-- substract 1 to use for loop index as matrix index -->
+        <cell v-bind:active="matrix[row-1][col-1]"></cell>
       </div>
     </div>
   </div>

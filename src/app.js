@@ -9,14 +9,23 @@ var app = new Vue({
   // from within computed properties
   computed: {
     ROWS: function () {
-      return store.state.ROWS
+      return store.state.ROWS;
     },
     COLS: function () {
-      return store.state.COLS
+      return store.state.COLS;
     },
+    matrix: function () {
+      return store.state.matrix;
+    }
   },
 
   created: function () {
     console.log('conway\'s way of life app created...');
+
+    var options = {
+      rows: 25,
+      cols: 25,
+    };
+    store.commit('init', options); // initializing store
   }
 });

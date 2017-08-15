@@ -1,10 +1,15 @@
 Vue.component('cell', {
   template: '<div v-bind:class="{ active: active }" v-bind:style="styleObject"></div>',
 
-  data: function () {
-    return {
-      active: Math.random() < 0.5,
+  props: {
+    active: {
+      type: Boolean,
+      default: false,
     }
+  },
+
+  data: function () {
+    return {}
   },
   computed: {
     styleObject: function () {
@@ -14,5 +19,5 @@ Vue.component('cell', {
         background: this.active ? '#000000' : '#FFFFFF'
       }
     }
-  }
+  },
 });
