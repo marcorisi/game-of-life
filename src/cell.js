@@ -16,7 +16,8 @@ Vue.component('cell', {
       return {
         width: '10px',
         height: '10px',
-        background: this.active ? '#000000' : '#FFFFFF'
+        background: this.active ? '#000000' : '#FFFFFF',
+        border: '1px solid #CCC'
       }
     }
   },
