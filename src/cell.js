@@ -1,3 +1,8 @@
+/**
+ * Represents a cell in Conway's game of live.
+ * This component exposes the active props: it specifies whether the cell
+* is live or dead.
+ */
 Vue.component('cell', {
   template: '<div v-bind:class="{ active: active }" v-bind:style="styleObject"></div>',
 
@@ -11,6 +16,7 @@ Vue.component('cell', {
   data: function () {
     return {}
   },
+
   computed: {
     styleObject: function () {
       return {

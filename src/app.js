@@ -1,3 +1,6 @@
+/**
+ * Vue app definition.
+ */
 var app = new Vue({
   el: '#app',
 
@@ -6,8 +9,11 @@ var app = new Vue({
   },
 
   methods: {
-    // start a new game of life
-    play: function (event) {
+    /**
+     * Starts a new Game Of Life
+     * @param {string}
+     */
+    play: function () {
 
       // already playing
       if (this._interval) {
@@ -20,8 +26,10 @@ var app = new Vue({
       }, 200);
     },
 
-    // stop game of life
-    stop: function (event) {
+    /**
+     * Stops the game.
+     */
+    stop: function () {
       clearInterval(this._interval);
       this._interval = null;          // reset _interval
     }
@@ -42,6 +50,9 @@ var app = new Vue({
     }
   },
 
+  /**
+   * As soon as the app is created, initialize the store.
+   */
   created: function () {
     console.log('conway\'s way of life app created...');
 

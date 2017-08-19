@@ -1,3 +1,6 @@
+/**
+ * Creates the store: its purpose is to manage the state of the app.
+ */
 var store = new Vuex.Store({
   state: {
     ROWS: 0,
@@ -6,8 +9,12 @@ var store = new Vuex.Store({
   },
 
   mutations: {
-    // Builds game of life matrix: this matrix has ROWS and COLS dimension.
-    // Each cells is randomly set to a boolean value.
+    /**
+     * Builds game of life matrix: this matrix has ROWS and COLS dimension.
+     * Each cells is randomly set to a boolean value.
+     * @param {string} state
+     * @param {object} options
+     */
     init (state, options) {
 
       var _ROWS = options.rows || 25,
@@ -32,7 +39,10 @@ var store = new Vuex.Store({
       console.log('game initialized');
     },
 
-    // calculate the next iteration of the Conway Game of Life
+    /**
+     * Calculates the next iteration of the game.
+     * @param {string} state
+     */
     next (state) {
 
       // Returns the matrix index of the neighbour cells
